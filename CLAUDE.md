@@ -18,7 +18,7 @@ Rispondi sempre in italiano. **Salvo vuole che tu gli faccia sempre domande** pr
 Sito offline e due domini diversi; highlight Instagram "Chiuso, riapriremo a settembre" ancora in evidenza a fine ottobre; post del raduno pubblicato due volte; locandine con testo troppo piccolo; Instagram sottoutilizzato rispetto a Facebook e rapporto follower/seguiti quasi 1:1; officina, biomeccanica e usato non citati in bio; banner cookie del vecchio sito non conforme GDPR.
 
 ## Il sito (questo repository)
-- Pubblicato con GitHub Pages: https://salvatorevirgillito04-code.github.io/dekasportpassion/
+- Pubblicato con GitHub Pages dal ramo `main`: https://salvatorevirgillito04-code.github.io/dekasportpassion/ . Salvo vuole le modifiche online a ogni passo (portarle su `main`).
 - HTML/CSS/JS statici, nessun build. Pagine: `index.html`, `servizi.html` (officina, biomeccanica, prenotazione), `eventi.html`, `shop.html`, `contatti.html`, `privacy.html` (informativa privacy e cookie di esempio, linkata dal footer). Fascia demo, menu e footer sono iniettati da `app.js` (anche link WhatsApp, orari, logica di prenotazione).
 - Stile scelto da Salvo: sfondo avorio #FAF7F0, colori del brand (verde DEKA #6CE002 su nero #0B0F12; per testo verde su chiaro #2E6B00), font Barlow Condensed + Barlow.
 - Ordine homepage voluto da Salvo: copertina → servizi → eventi → shop → bici in vetrina (nuove e usate) → storia e recensioni → invito a prenotare.
@@ -29,7 +29,7 @@ Sito offline e due domini diversi; highlight Instagram "Chiuso, riapriremo a set
 
 ## Prossimi passi previsti
 **Priorità decisa da Salvo: il sito deve essere perfetto prima di passare a qualsiasi altra cosa.**
-1. Controllare il sito su telefono pagina per pagina (Home, Officina e biomeccanica, Eventi, Shop, Contatti), facendo domande a Salvo su ogni sezione. Ultime correzioni fatte: foto copertina ritagliata e con proporzioni giuste; menu su telefono con voci corte tutte visibili (Home · Officina · Eventi · Shop · Contatti); categorie shop e partner su 2 colonne su telefono; segnaposto resi eleganti (scelta di Salvo): riquadro scuro con bici e "Foto in arrivo", "Prezzo in negozio", e le altre parti da completare evidenziate in giallo tratteggiato con la classe `todo` (spiegato nella fascia demo).
+1. Controllare il sito su telefono pagina per pagina (Home, Officina e biomeccanica, Eventi, Shop, Contatti), facendo domande a Salvo su ogni sezione. Ultime correzioni fatte: copertina senza foto (scelta di Salvo; la Cervélo resta in vetrina) con pulsanti "Prenota l'officina" e "Scrivici su WhatsApp"; menu su telefono con voci corte tutte visibili (Home · Officina · Eventi · Shop · Contatti); categorie shop e partner su 2 colonne su telefono; segnaposto resi eleganti (scelta di Salvo): riquadro scuro con bici e "Foto in arrivo", "Prezzo in negozio", e le altre parti da completare evidenziate in giallo tratteggiato con la classe `todo` (spiegato nella fascia demo).
 2. Restyling Instagram: bio, copertine highlight, 6–9 post di esempio.
 3. Documento di proposta: analisi, servizi, calendario editoriale, prezzi di Salvo.
 4. Dopo il sì: negozio online vero (Shopify consigliato, sincronizzabile con eBay e catalogo Instagram/Facebook), dominio intestato all'azienda, automazioni (programmazione post, risposte DM, canale WhatsApp eventi, richiesta recensioni).
