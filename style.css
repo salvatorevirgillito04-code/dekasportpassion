@@ -7,7 +7,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--green-ink)}
 h1,h2,h3,h4{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1;margin:0}
 h1{font-size:clamp(48px,7vw,88px);font-style:italic;line-height:.95}
@@ -71,7 +71,7 @@ header{position:sticky;top:0;z-index:20;background:var(--dark)}
 .tabs button[aria-pressed=true]{background:var(--green)}
 .bike{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .bike .ph{height:190px;background:#ECE6D8;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:14px}
-.bike img{height:190px;width:100%;object-fit:cover;background:var(--dark)}
+.bike img{height:190px!important;width:100%;object-fit:cover;background:var(--dark)}
 .bike .in{padding:20px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
 .bike p{color:var(--ink2);font-size:15px}
 .badge{align-self:flex-start;background:var(--green);color:var(--dark);font-size:13px;font-weight:600;padding:3px 10px;border-radius:99px}
@@ -118,6 +118,19 @@ footer h4{color:#F2F4F5;font-size:20px;margin-bottom:8px}
 footer a{color:var(--green)}
 footer img{height:52px;width:auto}
 .legal{margin-top:32px;font-size:13px;color:#8C979F}
+
+/* telefono: menu compatto su una riga scorrevole, non resta incollato in alto */
+@media (max-width:760px){
+  header{position:static}
+  .nav{padding:10px 16px;gap:8px}
+  .nav img{height:36px}
+  .nav .btn{min-height:44px;padding:8px 16px;font-size:17px}
+  .nav nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:18px;padding-bottom:2px;scrollbar-width:none}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav nav a{white-space:nowrap;font-size:17px}
+  section{padding:48px 0}
+  .hero .wrap{gap:28px}
+}
 
 /* whatsapp float */
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
