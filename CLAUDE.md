@@ -27,7 +27,8 @@ Sito offline e due domini diversi; highlight Instagram "Chiuso, riapriremo a set
 - Foto: per ora solo la Cervélo S5 (ultimo arrivo, post del 17 settembre) e il logo, ritagliati da screenshot del loro Instagram. Le parti tra parentesi quadre ([PREZZO], [NOME EVENTO], storia della famiglia, partner…) vanno completate con dati veri: non inventarle.
 
 ## Prossimi passi previsti
-1. Controllare il sito su telefono pagina per pagina.
+**Priorità decisa da Salvo: il sito deve essere perfetto prima di passare a qualsiasi altra cosa.**
+1. Controllare il sito su telefono pagina per pagina (Home, Officina e biomeccanica, Eventi, Shop, Contatti), facendo domande a Salvo su ogni sezione. Ultime correzioni fatte: foto copertina ritagliata e con proporzioni giuste, menu compatto su telefono.
 2. Restyling Instagram: bio, copertine highlight, 6–9 post di esempio.
 3. Documento di proposta: analisi, servizi, calendario editoriale, prezzi di Salvo.
 4. Dopo il sì: negozio online vero (Shopify consigliato, sincronizzabile con eBay e catalogo Instagram/Facebook), dominio intestato all'azienda, automazioni (programmazione post, risposte DM, canale WhatsApp eventi, richiesta recensioni).
