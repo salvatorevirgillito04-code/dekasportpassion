@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Officina e biomeccanica – Deka Sport Passion (demo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="servizi">
+<main>
+
+<section class="page-hero">
+  <div class="wrap stack">
+    <p class="eyebrow">Servizi</p>
+    <h1>Officina e biomeccanica</h1>
+    <p class="lead">Mani esperte sulla tua bici e una posizione in sella costruita su di te.</p>
+  </div>
+</section>
+
+<section id="officina">
+  <div class="wrap">
+    <div class="head-row"><h2>Officina specializzata</h2></div>
+    <div class="grid">
+      <article class="card"><h3>Tagliando completo</h3><p>Controllo di trasmissione, freni, ruote, serraggi e pulizia. [COSA INCLUDE]</p><p class="price">[PREZZO]</p></article>
+      <article class="card"><h3>Gruppi e cambio elettronico</h3><p>Montaggio, regolazione e aggiornamento di gruppi meccanici ed elettronici.</p><p class="price">[PREZZO]</p></article>
+      <article class="card"><h3>Ruote e tubeless</h3><p>Centratura, montaggio tubeless, sostituzione cuscinetti e pneumatici.</p><p class="price">[PREZZO]</p></article>
+      <article class="card"><h3>Montaggio bici completa</h3><p>Dal telaio alla bici finita, con i componenti che scegli tu.</p><p class="price">[PREZZO]</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="biomeccanica">
+  <div class="wrap">
+    <div class="head-row"><h2>Biomeccanica</h2></div>
+    <div class="grid">
+      <article class="card"><h3>1. Colloquio</h3><p>Parliamo di come pedali, dei tuoi obiettivi e di eventuali fastidi.</p></article>
+      <article class="card"><h3>2. Misurazioni</h3><p>Rilevamento delle misure e analisi della pedalata. [STRUMENTI USATI]</p></article>
+      <article class="card"><h3>3. Regolazione</h3><p>Sella, attacco manubrio e tacchette regolati sulla tua bici, con scheda finale.</p></article>
+    </div>
+    <p class="hint">Durata e prezzo: [DA CONFERMARE CON IL NEGOZIO]</p>
+  </div>
+</section>
+
+<section id="prenota">
+  <div class="wrap booking">
+    <div class="stack" style="margin-bottom:28px">
+      <h2>Prenota online</h2>
+      <p class="lead">Scegli servizio, giorno e orario tra quelli disponibili.</p>
+    </div>
+
+    <form id="booking" class="panel" novalidate>
+      <fieldset><legend>1. Servizio</legend><div class="chips" id="b-services"></div></fieldset>
+      <fieldset><legend>2. Giorno</legend><div class="chips days" id="b-days"></div></fieldset>
+      <fieldset><legend>3. Orario disponibile</legend><div class="chips slots" id="b-slots"></div>
+        <p class="hint">Gli orari barrati sono già occupati. Il martedì mattina e la domenica il negozio è chiuso.</p></fieldset>
+      <div class="fields">
+        <label>Nome e cognome<input type="text" name="nome" autocomplete="name"></label>
+        <label>Telefono<input type="tel" name="telefono" autocomplete="tel"></label>
+        <label>Tipo di bici<select name="bici"><option>Corsa</option><option>Gravel</option><option>MTB</option><option>Altro</option></select></label>
+      </div>
+      <label>Cosa dobbiamo fare? (facoltativo)<textarea name="note" rows="3"></textarea></label>
+      <div class="foot-row">
+        <p id="b-summary" aria-live="polite" style="color:var(--ink2)"></p>
+        <button class="btn" type="submit">Conferma prenotazione</button>
+      </div>
+    </form>
+
+    <div id="b-done" class="panel ok" role="status" tabindex="-1" hidden>
+      <h3 style="font-size:32px">Prenotazione ricevuta!</h3>
+      <p id="b-done-text" style="color:var(--ink2);font-size:18px"></p>
+      <button class="btn ghost" type="button" id="b-reset" style="align-self:flex-start">Nuova prenotazione</button>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
