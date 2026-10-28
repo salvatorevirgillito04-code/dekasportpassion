@@ -25,7 +25,8 @@
     '<a href="https://www.instagram.com/_s_alvo/" target="_blank" rel="noopener">Instagram @_s_alvo</a>' +
     '<br><span class="todo">In giallo</span> le parti da completare con il negozio</div>' +
     '<header><div class="nav">' +
-    '<a href="index.html" aria-label="Deka Sport Passion, home"><img src="img/deka-logo.jpg" alt="Deka Sport Passion"></a>' +
+    '<a class="brand" href="index.html" aria-label="Deka Sport Passion, home"><img src="img/deka-logo.png" alt="Deka Sport Passion" width="446" height="180">' +
+    '<span class="tag" aria-hidden="true"><b>Dal 1973</b>Romagna</span></a>' +
     '<nav aria-label="Menu principale">' +
     links.map(function (l) {
       return '<a href="' + l[0] + '"' + (l[2] === page ? ' aria-current="page"' : '') + '>' + l[1] + '</a>';
@@ -36,7 +37,7 @@
 
   var bottom =
     '<footer><div class="wrap"><div class="grid">' +
-    '<div class="stack"><img src="img/deka-logo.jpg" alt="Deka Sport Passion"><span>Articoli e servizi sportivi dal 1973</span></div>' +
+    '<div class="stack"><img src="img/deka-logo.png" alt="Deka Sport Passion" width="446" height="180"><span>Articoli e servizi sportivi dal 1973</span></div>' +
     '<div><h4>Dove siamo</h4>Via Ricci Curbastro 15/17<br>48020 Sant\'Agata sul Santerno (RA)<br><a href="tel:+39054545411">0545 45411</a></div>' +
     '<div><h4>Orari</h4>' + HOURS + '</div>' +
     '<div><h4>Seguici</h4><a href="https://www.instagram.com/dekasportpassion/" target="_blank" rel="noopener">Instagram</a><br>' +
