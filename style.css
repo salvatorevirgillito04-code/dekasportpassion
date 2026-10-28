@@ -51,12 +51,7 @@ header{position:sticky;top:0;z-index:20;background:var(--dark)}
 .more{font-weight:600;padding:10px 0;display:inline-block}
 
 /* hero */
-.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px}
-.hero .txt{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:22px}
-.hero figure{flex:1 1 460px;min-width:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.hero figure img{border-radius:10px}
-.hero figcaption{color:var(--ink2);font-size:15px}
-.hero figcaption b{color:var(--green-ink)}
+.hero .txt{max-width:760px;display:flex;flex-direction:column;gap:22px}
 .page-hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
 
 /* grids & cards */
@@ -160,7 +155,6 @@ footer img{height:52px;width:auto}
   .cat{padding:16px 14px;min-height:0}
   .cat b{font-size:20px;line-height:1.05}
   .cat span{font-size:13px}
-  .hero .wrap{gap:28px}
 }
 
 /* whatsapp float */
