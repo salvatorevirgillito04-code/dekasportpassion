@@ -24,11 +24,11 @@ Sito offline e due domini diversi; highlight Instagram "Chiuso, riapriremo a set
 - Ordine homepage voluto da Salvo: copertina → servizi → eventi → shop → bici in vetrina (nuove e usate) → storia e recensioni → invito a prenotare.
 - Prenotazione: modulo con servizio, giorno e orario disponibili (segue gli orari reali; martedì solo pomeriggio, domenica esclusa). È solo dimostrativo: non invia nulla. Salvo vuole il modulo; eventuali cambi dopo aver parlato col titolare.
 - Regole da mantenere finché il negozio non approva: fascia "Demo – proposta di Salvo, non è il sito ufficiale" con il suo Instagram, `noindex` su ogni pagina e `robots.txt` che blocca i motori di ricerca.
-- Foto: per ora solo la Cervélo S5 (ultimo arrivo, post del 17 settembre) e il logo, ritagliati da screenshot del loro Instagram. Le parti tra parentesi quadre ([PREZZO], [NOME EVENTO], storia della famiglia, partner…) vanno completate con dati veri: non inventarle.
+- Foto: per ora solo la Cervélo S5 (ultimo arrivo, post del 17 settembre) e il logo, ritagliati da screenshot del loro Instagram. Le parti da completare (evidenziate in giallo con `<span class="todo">`: nome evento, storia della famiglia, partner, modelli…; più "Prezzo in negozio" e "Foto in arrivo") vanno completate con dati veri: non inventarle.
 
 ## Prossimi passi previsti
 **Priorità decisa da Salvo: il sito deve essere perfetto prima di passare a qualsiasi altra cosa.**
-1. Controllare il sito su telefono pagina per pagina (Home, Officina e biomeccanica, Eventi, Shop, Contatti), facendo domande a Salvo su ogni sezione. Ultime correzioni fatte: foto copertina ritagliata e con proporzioni giuste, menu compatto su telefono.
+1. Controllare il sito su telefono pagina per pagina (Home, Officina e biomeccanica, Eventi, Shop, Contatti), facendo domande a Salvo su ogni sezione. Ultime correzioni fatte: foto copertina ritagliata e con proporzioni giuste; menu su telefono con voci corte tutte visibili (Home · Officina · Eventi · Shop · Contatti); categorie shop e partner su 2 colonne su telefono; segnaposto resi eleganti (scelta di Salvo): riquadro scuro con bici e "Foto in arrivo", "Prezzo in negozio", e le altre parti da completare evidenziate in giallo tratteggiato con la classe `todo` (spiegato nella fascia demo).
 2. Restyling Instagram: bio, copertine highlight, 6–9 post di esempio.
 3. Documento di proposta: analisi, servizi, calendario editoriale, prezzi di Salvo.
 4. Dopo il sì: negozio online vero (Shopify consigliato, sincronizzabile con eBay e catalogo Instagram/Facebook), dominio intestato all'azienda, automazioni (programmazione post, risposte DM, canale WhatsApp eventi, richiesta recensioni).
