@@ -92,6 +92,7 @@
   var elSum = document.getElementById('b-summary');
   var elDone = document.getElementById('b-done');
   var elDoneTxt = document.getElementById('b-done-text');
+  var altro = form.elements.bici.querySelector('[data-altro]');
 
   function summary() {
     var dt = days[state.day];
@@ -118,6 +119,11 @@
         ' aria-pressed="' + (state.slot === t) + '">' + t + '</button>';
     }).join('');
     elSum.textContent = summary();
+    /* Tipo di bici: "Altro" solo per l'officina, non per la biomeccanica */
+    var bici = form.elements.bici;
+    var bio = state.service === 'Biomeccanica';
+    if (bio && altro.parentNode) { if (altro.selected) bici.selectedIndex = 0; altro.remove(); }
+    else if (!bio && !altro.parentNode) bici.appendChild(altro);
   }
 
   form.addEventListener('click', function (e) {
