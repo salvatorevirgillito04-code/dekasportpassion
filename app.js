@@ -12,7 +12,7 @@
 
   var links = [
     ['index.html', 'Home', 'home'],
-    ['servizi.html', 'Officina e biomeccanica', 'servizi'],
+    ['servizi.html', 'Officina<span class="nav-long"> e biomeccanica</span>', 'servizi'],
     ['eventi.html', 'Eventi', 'eventi'],
     ['shop.html', 'Shop', 'shop'],
     ['contatti.html', 'Contatti', 'contatti']
@@ -20,7 +20,8 @@
 
   var top =
     '<div class="demo" role="note">Demo – proposta di Salvo per Deka Sport Passion, non è il sito ufficiale · ' +
-    '<a href="https://www.instagram.com/_s_alvo/" target="_blank" rel="noopener">Instagram @_s_alvo</a></div>' +
+    '<a href="https://www.instagram.com/_s_alvo/" target="_blank" rel="noopener">Instagram @_s_alvo</a>' +
+    '<br><span class="todo">In giallo</span> le parti da completare con il negozio</div>' +
     '<header><div class="nav">' +
     '<a href="index.html" aria-label="Deka Sport Passion, home"><img src="img/deka-logo.jpg" alt="Deka Sport Passion"></a>' +
     '<nav aria-label="Menu principale">' +
