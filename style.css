@@ -159,6 +159,11 @@ footer img{height:52px;width:auto;align-self:flex-start}
   .nav nav a{white-space:nowrap;font-size:17px}
   section{padding:48px 0}
   .grid.sm{grid-template-columns:1fr 1fr;gap:10px}
+  .services{gap:12px}
+  .services .card{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:8px 14px;padding:20px}
+  .services .icon{width:36px;height:36px}
+  .services .card p,.services .card .more{grid-column:1/-1}
+  .services .card .more{padding:4px 0 0}
   .cat{padding:16px 14px;min-height:0}
   .cat b{font-size:20px;line-height:1.05}
   .cat span{font-size:13px}
