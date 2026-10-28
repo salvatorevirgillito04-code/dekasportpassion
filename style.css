@@ -51,6 +51,7 @@ header{position:sticky;top:0;z-index:20;background:var(--dark)}
 .btn.ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
 .btn.wa{background:var(--wa);border-color:var(--wa)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
+.section-end{margin-top:28px}
 .more{font-weight:600;padding:10px 0;display:inline-block}
 
 /* hero */
