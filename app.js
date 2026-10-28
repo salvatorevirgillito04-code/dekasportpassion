@@ -1,7 +1,9 @@
 /* Deka Sport Passion – demo. Parti comuni (fascia demo, menu, footer) e interazioni. */
 (function () {
   var page = document.body.getAttribute('data-page') || '';
-  var WA = 'M3 21l1.6-4.8A8.5 8.5 0 1 1 7.8 19.4z';
+  /* Icona WhatsApp: fumetto con cornetta */
+  var WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bubble" d="M3 21l1.6-4.8A8.5 8.5 0 1 1 7.8 19.4z"/>' +
+    '<path class="phone" d="M9.2 7.6c.3 0 .5.1.6.4l.7 1.6c.1.3 0 .5-.1.7l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.5-.2.7-.1l1.6.7c.3.1.4.3.4.6v1c0 .6-.5 1.1-1.1 1.1A7.1 7.1 0 0 1 8.1 8.7c0-.6.5-1.1 1.1-1.1z"/></svg>';
   var WA_LINK = 'https://wa.me/393488112611';
   var HOURS = 'Lun e mer–sab: 9:00–12:30 · 15:30–19:30<br>Mar: 15:30–19:30<br>Dom: chiuso';
 
@@ -38,10 +40,10 @@
     '<div><h4>Dove siamo</h4>Via Ricci Curbastro 15/17<br>48020 Sant\'Agata sul Santerno (RA)<br><a href="tel:+39054545411">0545 45411</a></div>' +
     '<div><h4>Orari</h4>' + HOURS + '</div>' +
     '<div><h4>Seguici</h4><a href="https://www.instagram.com/dekasportpassion/" target="_blank" rel="noopener">Instagram</a><br>' +
-    '<a href="https://www.facebook.com/search/top?q=Deka%20Sport%20Passion" target="_blank" rel="noopener">Facebook</a><br>' +
+    '<a href="https://www.facebook.com/dekasportpassion" target="_blank" rel="noopener">Facebook</a><br>' +
     '<a href="' + WA_LINK + '" target="_blank" rel="noopener">WhatsApp 348 811 2611</a></div>' +
-    '</div><p class="legal">Sport Passion Srl · P.IVA 02413030392 · Privacy · Cookie · Sito dimostrativo</p></div></footer>' +
-    '<a class="wa-float" href="' + WA_LINK + '" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + WA + '"></path></svg></a>';
+    '</div><p class="legal">Sport Passion Srl · P.IVA 02413030392 · <a href="privacy.html">Privacy</a> · <a href="privacy.html#cookie">Cookie</a> · Sito dimostrativo</p></div></footer>' +
+    '<a class="wa-float" href="' + WA_LINK + '" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">' + WA_ICON + '</a>';
 
   document.body.insertAdjacentHTML('afterbegin', top);
   document.body.insertAdjacentHTML('beforeend', bottom);
@@ -56,6 +58,17 @@
         g.hidden = g.getAttribute('data-group') !== t;
       });
     });
+  });
+
+  /* Mappa Google caricata solo su richiesta: nessun cookie di terzi finché non la si apre */
+  var map = document.getElementById('map-consent');
+  if (map) map.querySelector('button').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.className = 'map';
+    f.title = map.getAttribute('data-title');
+    f.src = map.getAttribute('data-src');
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    map.replaceWith(f);
   });
 
   /* Prenotazione */
