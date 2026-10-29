@@ -36,8 +36,10 @@
     '</div></header>';
 
   var bottom =
-    '<footer><div class="wrap"><div class="grid">' +
-    '<div class="stack"><img src="img/deka-logo.png" alt="Deka Sport Passion" width="446" height="180"><span>Articoli e servizi sportivi dal 1973</span></div>' +
+    '<footer><div class="wrap">' +
+    '<div class="foot-brand"><img src="img/deka-logo-lg.png" alt="Deka Sport Passion" width="1111" height="448">' +
+    '<p>Articoli e servizi sportivi dal 1973<br>Sant\'Agata sul Santerno, Romagna</p></div>' +
+    '<div class="grid">' +
     '<div><h4>Dove siamo</h4>Via Ricci Curbastro 15/17<br>48020 Sant\'Agata sul Santerno (RA)<br><a href="tel:+39054545411">0545 45411</a></div>' +
     '<div><h4>Orari</h4>' + HOURS + '</div>' +
     '<div><h4>Seguici</h4><a href="https://www.instagram.com/dekasportpassion/" target="_blank" rel="noopener">Instagram</a><br>' +
@@ -95,7 +97,7 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     document.documentElement.classList.add('js');
     document.querySelectorAll('main section').forEach(function (sec) {
-      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .svc, .ride, .last-ride, .signs, .ebay, .card, .bike, .story-ph, .partners li, .pl-row, .bio-fig, .path li, .past, .reel, .panel, .map, .prose > *, .hint')
+      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .svc, .ride, .last-ride, .signs, .ebay, .bike, .story-ph, .partners li, .pl-row, .bio-fig, .path li, .past, .reel, .contact-info > div, .panel, .map, .prose > *, .hint')
         .forEach(function (el, i) {
           if (el.closest('.rv')) return;
           el.classList.add('rv');
