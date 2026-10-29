@@ -49,6 +49,62 @@
   document.body.insertAdjacentHTML('afterbegin', top);
   document.body.insertAdjacentHTML('beforeend', bottom);
 
+  /* Copertina: orari di oggi e "aperto ora", calcolati sull'ora italiana */
+  var nowHours = document.getElementById('now-hours');
+  if (nowHours) {
+    var OPEN = [[], [[540, 750], [930, 1170]], [[930, 1170]], [[540, 750], [930, 1170]],
+      [[540, 750], [930, 1170]], [[540, 750], [930, 1170]], [[540, 750], [930, 1170]]]; /* dom…sab, minuti dalla mezzanotte */
+    var DAYS = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+    var hm = function (m) { return Math.floor(m / 60) + ':' + ('0' + m % 60).slice(-2); };
+    var nowTitle = document.getElementById('now-title');
+    var nowState = document.getElementById('now-state');
+    var updateNow = function () {
+      var p = {};
+      new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+        .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+      var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
+      var min = +p.hour * 60 + +p.minute;
+      var today = OPEN[day];
+      nowTitle.textContent = 'Orari di oggi, ' + DAYS[day];
+      nowHours.textContent = today.length ? today.map(function (r) { return hm(r[0]) + '–' + hm(r[1]); }).join(' · ') : 'Chiuso';
+      var open = today.filter(function (r) { return min >= r[0] && min < r[1]; })[0];
+      var state;
+      if (open) state = 'Aperto ora · chiude alle ' + hm(open[1]);
+      else {
+        var later = today.filter(function (r) { return r[0] > min; })[0];
+        if (later) state = 'Chiuso ora · riapre alle ' + hm(later[0]);
+        else {
+          for (var i = 1; i <= 7 && !OPEN[(day + i) % 7].length; i++);
+          state = 'Chiuso ora · riapre ' + (i === 1 ? 'domani' : DAYS[(day + i) % 7]) + ' alle ' + hm(OPEN[(day + i) % 7][0][0]);
+        }
+      }
+      nowState.textContent = state;
+      nowState.className = 'now-state' + (open ? ' open' : '');
+      nowState.hidden = false;
+    };
+    updateNow();
+    setInterval(updateNow, 60000);
+  }
+
+  /* Entrate sfalsate delle sezioni (niente se il telefono chiede meno movimento) */
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); seen.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.documentElement.classList.add('js');
+    document.querySelectorAll('main section').forEach(function (sec) {
+      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .svc, .ride, .last-ride, .signs, .ebay, .card, .bike, .stat, .cat, .panel, .map, .prose > *, .hint')
+        .forEach(function (el, i) {
+          if (el.closest('.rv')) return;
+          el.classList.add('rv');
+          el.style.transitionDelay = (i % 6) * 70 + 'ms';
+          seen.observe(el);
+        });
+    });
+  }
+
   /* Vetrina bici: Nuove / Usate */
   var tabs = document.querySelectorAll('[data-tab]');
   tabs.forEach(function (b) {
