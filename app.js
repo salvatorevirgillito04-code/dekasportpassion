@@ -27,12 +27,14 @@
     '<header><div class="nav">' +
     '<a class="brand" href="index.html" aria-label="Deka Sport Passion, home"><img src="img/deka-logo.png" alt="Deka Sport Passion" width="446" height="180">' +
     '<span class="tag" aria-hidden="true"><b>Dal 1973</b>Romagna</span></a>' +
-    '<nav aria-label="Menu principale">' +
+    '<nav id="menu-sheet" aria-label="Menu principale">' +
+    '<button type="button" class="menu-close">Chiudi</button>' +
     links.map(function (l) {
       return '<a href="' + l[0] + '"' + (l[2] === page ? ' aria-current="page"' : '') + '>' + l[1] + '</a>';
     }).join('') +
     '</nav>' +
     '<a class="btn" href="servizi.html#prenota">Prenota</a>' +
+    '<button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-sheet">Menu</button>' +
     '</div></header>';
 
   var bottom =
@@ -107,6 +109,24 @@
         });
     });
   }
+
+  /* Menu su telefono: una riga con "Menu" che apre le voci a tutto schermo */
+  var navBar = document.querySelector('.nav');
+  var menuBtn = navBar.querySelector('.menu-btn');
+  var setMenu = function (open) {
+    navBar.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    (open ? navBar.querySelector('nav a') : menuBtn).focus();
+  };
+  menuBtn.addEventListener('click', function () { setMenu(true); });
+  navBar.querySelector('.menu-close').addEventListener('click', function () { setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navBar.classList.contains('open')) setMenu(false);
+  });
+  navBar.querySelectorAll('nav a').forEach(function (a) {
+    a.addEventListener('click', function () { if (navBar.classList.contains('open')) setMenu(false); });
+  });
 
   /* Vetrina bici: Nuove / Usate */
   var tabs = document.querySelectorAll('[data-tab]');
