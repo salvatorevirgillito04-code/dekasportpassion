@@ -111,17 +111,19 @@ header{position:sticky;top:0;z-index:20;background:var(--dark)}
 .pl-row h3{font-size:var(--fs-m)}
 .pl-row .price{text-align:right;white-space:nowrap}
 
-/* biomeccanica: percorso in tre passaggi accanto al disegno */
-.bio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;align-items:center}
-.bio-fig{margin:0;aspect-ratio:1;background:var(--dark);border-radius:var(--r-box);display:flex;align-items:center;justify-content:center}
-.bio-fig svg{width:62%;height:62%;stroke:var(--green);fill:none;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
-.bio-fig .joint{fill:var(--dark)}
-.bio-fig .dash{stroke-width:.7;stroke-dasharray:1 1.4}
-.bio-fig .thin{stroke-width:.7}
+/* biomeccanica: percorso in tre passaggi (in fila su computer, in colonna su telefono) */
 .path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:36px;position:relative}
 .path li:not(:last-child)::after{content:"";position:absolute;left:9px;top:14px;height:calc(100% + 36px);width:3px;background:var(--green)}
 .path li{position:relative;padding-left:44px;display:flex;flex-direction:column;gap:8px}
 .path li::before{content:"";position:absolute;left:0;top:4px;width:21px;height:21px;border-radius:50%;background:var(--dark);border:4px solid var(--green);box-sizing:border-box;z-index:1}
+.bio-prices{margin-top:48px}
+.bio-prices .pl-row{background:var(--bg)}
+@media (min-width:761px){
+  .path{flex-direction:row;gap:40px}
+  .path li{flex:1;padding:48px 0 0}
+  .path li::before{top:4px}
+  .path li:not(:last-child)::after{left:21px;top:13px;width:calc(100% + 19px);height:3px}
+}
 .path h3{font-size:var(--fs-m)}
 .last-ride{margin-top:28px;font-size:var(--fs-s);max-width:860px}
 
@@ -268,10 +270,8 @@ footer a{color:var(--green)}
   .ride-data:has(> div:nth-child(5)){grid-template-columns:1fr 1fr}
   .pl-row{grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;padding:20px}
   .pl-row p:not(.price){grid-column:1/-1;grid-row:2}
-  .bio{grid-template-columns:1fr;gap:32px}
   .past-wrap{grid-template-columns:1fr;gap:28px}
-  .bio-fig{max-width:260px;width:100%}
-  .contact{grid-template-columns:1fr;gap:36px}
+    .contact{grid-template-columns:1fr;gap:36px}
   .contact .map{min-height:340px}
   .foot-brand{margin-bottom:40px}
   .ebay{padding:20px}

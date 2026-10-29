@@ -100,7 +100,7 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     document.documentElement.classList.add('js');
     document.querySelectorAll('main section').forEach(function (sec) {
-      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .side, .svc, .ride, .last-ride, .signs, .ebay, .bike, .story-ph, .partners li, .pl-row, .bio-fig, .path li, .past, .reel, .contact-info > div, .panel, .map, .prose > *, .hint')
+      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .side, .svc, .ride, .last-ride, .signs, .ebay, .bike, .story-ph, .partners li, .pl-row, .path li, .past, .reel, .contact-info > div, .panel, .map, .prose > *, .hint')
         .forEach(function (el, i) {
           if (el.closest('.rv')) return;
           el.classList.add('rv');
