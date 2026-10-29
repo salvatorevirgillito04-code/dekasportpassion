@@ -13,44 +13,54 @@
 <section class="hero">
   <div class="wrap">
     <div class="txt">
-      <p class="eyebrow">Sant'Agata sul Santerno · Romagna</p>
       <h1>Dal 1973<br>in sella con te.</h1>
-      <p class="lead">Bici da corsa, gravel e MTB nuove e usate, officina specializzata, biomeccanica e uscite in compagnia per le strade della Romagna.</p>
+      <p class="lead">A Sant'Agata sul Santerno, in Romagna: bici da corsa, gravel e MTB nuove e usate, officina specializzata, biomeccanica e uscite in compagnia.</p>
       <div class="btns">
         <a class="btn" href="servizi.html#prenota">Prenota l'officina</a>
         <a class="btn wa" href="https://wa.me/393488112611" data-wa>Scrivici su WhatsApp</a>
       </div>
     </div>
+    <aside class="now" aria-labelledby="now-title">
+      <h2 id="now-title" class="now-title">Orari di oggi</h2>
+      <p class="now-hours" id="now-hours">Lun e mer–sab 9:00–12:30 · 15:30–19:30<br>Mar 15:30–19:30 · Dom chiuso</p>
+      <p class="now-state" id="now-state" hidden></p>
+      <a class="now-link" href="contatti.html">Tutti gli orari e come arrivare →</a>
+      <dl class="facts">
+        <div><dt>1973</dt><dd>l'anno in cui abbiamo aperto</dd></div>
+        <div><dt>98%</dt><dd>recensioni positive su Facebook</dd></div>
+        <div><dt>5.000+</dt><dd>feedback sul nostro negozio eBay</dd></div>
+      </dl>
+    </aside>
   </div>
 </section>
 
 <section class="alt" id="servizi">
   <div class="wrap">
     <div class="head-row"><h2>I nostri servizi</h2></div>
-    <div class="grid services">
-      <article class="card">
+    <div class="svc-list">
+      <a class="svc" href="servizi.html#prenota">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
         <h3>Officina specializzata</h3>
         <p>Tagliandi, montaggi, cambi elettronici e ruote. Prenoti online e sai già quando ripassare.</p>
-        <a class="more" href="servizi.html#prenota">Prenota un intervento →</a>
-      </article>
-      <article class="card">
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="svc" href="servizi.html#biomeccanica">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle class="dash" cx="12" cy="16" r="4.5"/><path d="M4 4l10 5-4 11"/><path class="thin" d="M10.4 7.2A4 4 0 0 0 12.6 12.8"/><circle class="joint" cx="4" cy="4" r="1.7"/><circle class="joint" cx="14" cy="9" r="1.7"/><circle class="joint" cx="10" cy="20" r="1.7"/></svg>
         <h3>Biomeccanica</h3>
         <p>Posizione in sella su misura: più comfort, più potenza, meno dolori.</p>
-        <a class="more" href="servizi.html#biomeccanica">Scopri la biomeccanica →</a>
-      </article>
-      <article class="card">
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="svc" href="#vetrina">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg>
         <h3>Bici nuove e usate</h3>
         <p>Corsa, gravel e MTB nuove, e usato controllato in officina.</p>
-        <a class="more" href="#vetrina">Guarda la vetrina →</a>
-      </article>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="eventi">
+<section class="dark" id="eventi">
   <div class="wrap">
     <div class="head-row">
       <div class="stack">
@@ -58,37 +68,40 @@
         <p class="lead">Uscite e raduni in giro per la Romagna, con soste nei bar, ristoranti e agriturismi convenzionati.</p>
       </div>
     </div>
-    <div class="grid">
-      <article class="card feature">
-        <p class="eyebrow">Prossima uscita</p>
-        <h3><span class="todo">Nome evento</span></h3>
-        <ul class="list"><li><span class="todo">Data e ora di partenza</span></li><li>Ritrovo: <span class="todo">Luogo</span></li><li>Percorsi: <span class="todo">Km e dislivello</span></li><li>Sosta: <span class="todo">Locale convenzionato</span></li></ul>
-        <a class="btn" href="eventi.html" style="align-self:flex-start;margin-top:auto">Iscriviti</a>
-      </article>
-      <article class="card">
-        <p class="eyebrow" style="color:var(--mute)">Ultimo evento · 11 ottobre 2026</p>
-        <h3>Raduno Bike Off Road “La Sabbiona”</h3>
-        <p>Memorial Babbo Fontigi a Oriolo dei Fichi (Faenza): due percorsi, iscrizioni in loco e tanta Romagna sterrata.</p>
-        <a class="more" href="https://www.instagram.com/reel/DeEeomMHDno/" target="_blank" rel="noopener">Guarda il video su Instagram →</a>
-      </article>
+    <div class="ride">
+      <h3>Prossima uscita: <span class="todo">Nome evento</span></h3>
+      <dl class="ride-data">
+        <div><dt>Partenza</dt><dd><span class="todo">Data e ora</span></dd></div>
+        <div><dt>Ritrovo</dt><dd><span class="todo">Luogo</span></dd></div>
+        <div><dt>Percorsi</dt><dd><span class="todo">Km e dislivello</span></dd></div>
+        <div><dt>Sosta</dt><dd><span class="todo">Locale convenzionato</span></dd></div>
+      </dl>
+      <div class="btns">
+        <a class="btn" href="eventi.html#whatsapp">Iscriviti</a>
+        <a class="btn wa" href="eventi.html#whatsapp">Ricevi gli eventi su WhatsApp</a>
+      </div>
     </div>
-    <div class="section-end"><a class="btn wa" href="eventi.html#whatsapp">Ricevi gli eventi su WhatsApp</a></div>
+    <p class="last-ride">Ultimo evento, 11 ottobre 2026: <b>Raduno Bike Off Road “La Sabbiona”</b>, Memorial Babbo Fontigi a Oriolo dei Fichi (Faenza). <a href="https://www.instagram.com/reel/DeEeomMHDno/" target="_blank" rel="noopener">Guarda il video su Instagram →</a></p>
   </div>
 </section>
 
 <section class="alt" id="shop">
   <div class="wrap">
-    <div class="head-row"><h2>Shop online</h2><p style="color:var(--ink2)">Ritiro gratuito in negozio o spedizione a casa</p></div>
-    <div class="grid sm">
-      <a class="cat" href="shop.html#corsa"><b>Bici da corsa</b><span>Nuove e usate</span></a>
-      <a class="cat" href="shop.html#gravel"><b>Gravel</b><span>Bici e accessori</span></a>
-      <a class="cat" href="shop.html#mtb"><b>MTB</b><span>Bici e accessori</span></a>
-      <a class="cat" href="shop.html#abbigliamento"><b>Abbigliamento</b><span>Ciclismo, ogni stagione</span></a>
-      <a class="cat" href="shop.html#accessori"><b>Accessori</b><span>Caschi, scarpe, luci</span></a>
-      <a class="cat" href="shop.html#ricambi"><b>Ricambi</b><span>Pneumatici, catene, freni</span></a>
-      <a class="cat" href="shop.html#padel"><b>Padel e tennis</b><span>Racchette e palline</span></a>
-      <a class="cat" href="shop.html#altri"><b>Altri sport</b><span>Calcio, pallavolo, atletica</span></a>
-    </div>
+    <div class="head-row"><h2>Shop online</h2><p>Ritiro gratuito in negozio o spedizione a casa</p></div>
+    <ul class="signs">
+      <li><a href="shop.html#corsa">Bici da corsa</a></li>
+      <li><a href="shop.html#gravel">Gravel</a></li>
+      <li><a href="shop.html#mtb">MTB</a></li>
+      <li><a href="shop.html#abbigliamento">Abbigliamento</a></li>
+      <li><a href="shop.html#accessori">Accessori</a></li>
+      <li><a href="shop.html#ricambi">Ricambi</a></li>
+      <li><a href="shop.html#padel">Padel e tennis</a></li>
+      <li><a href="shop.html#altri">Altri sport</a></li>
+    </ul>
+    <a class="ebay" href="https://www.ebay.it/str/dekasportpassion" target="_blank" rel="noopener">
+      <span><b>Ci trovi anche su eBay</b>Oltre 5.000 feedback dei clienti sul negozio DEKA SPORT PASSION.</span>
+      <span class="ebay-go">Visita il negozio eBay →</span>
+    </a>
   </div>
 </section>
 
