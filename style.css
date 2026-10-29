@@ -160,15 +160,16 @@ a.side .more{color:var(--green-ink);text-decoration:underline;padding:4px 0 0}
 .tabs button{min-height:44px;border:0;border-radius:var(--r);padding:8px 20px;font-family:var(--display);font-weight:800;font-size:var(--fs-s);text-transform:uppercase;background:transparent;color:var(--ink);cursor:pointer}
 .tabs button[aria-pressed=true]{background:var(--green)}
 .bike{background:var(--card);border-radius:var(--r-box);overflow:hidden;display:flex;flex-direction:column}
-.bike .ph{height:190px;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#8C979F;font-size:var(--fs-xs);letter-spacing:.06em;text-transform:uppercase}
+.bike .ph{aspect-ratio:16/9;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#8C979F;font-size:var(--fs-xs);letter-spacing:.06em;text-transform:uppercase}
 .bike .ph svg{width:96px;height:96px;stroke:var(--green);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
-.bike img{height:190px!important;width:100%;object-fit:cover;background:var(--dark)}
+.bike img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#fff}
 .bike .in{padding:20px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
 .bike p{color:var(--ink2);font-size:var(--fs-xs)}
 .badge{align-self:flex-start;background:var(--green);color:var(--dark);font-size:var(--fs-xs);font-weight:600;padding:3px 10px;border-radius:var(--r)}
 .badge.used{background:var(--amber)}
 .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
 .price{font-family:var(--display);font-weight:800;font-size:var(--fs-m)}
+.price s{font-size:var(--fs-s);font-weight:600;color:var(--ink2);margin-right:6px}
 .price.ask{font-size:var(--fs-s);color:var(--ink2)}
 [hidden]{display:none!important}
 
