@@ -51,15 +51,13 @@
   document.body.insertAdjacentHTML('afterbegin', top);
   document.body.insertAdjacentHTML('beforeend', bottom);
 
-  /* Copertina: orari di oggi e "aperto ora", calcolati sull'ora italiana */
-  var nowHours = document.getElementById('now-hours');
-  if (nowHours) {
+  /* Orari di oggi e "aperto ora" (copertina e pagine interne), calcolati sull'ora italiana */
+  var nowBoxes = document.querySelectorAll('[data-now]');
+  if (nowBoxes.length) {
     var OPEN = [[], [[540, 750], [930, 1170]], [[930, 1170]], [[540, 750], [930, 1170]],
       [[540, 750], [930, 1170]], [[540, 750], [930, 1170]], [[540, 750], [930, 1170]]]; /* dom…sab, minuti dalla mezzanotte */
     var DAYS = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
     var hm = function (m) { return Math.floor(m / 60) + ':' + ('0' + m % 60).slice(-2); };
-    var nowTitle = document.getElementById('now-title');
-    var nowState = document.getElementById('now-state');
     var updateNow = function () {
       var p = {};
       new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
@@ -67,8 +65,6 @@
       var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
       var min = +p.hour * 60 + +p.minute;
       var today = OPEN[day];
-      nowTitle.textContent = 'Orari di oggi, ' + DAYS[day];
-      nowHours.textContent = today.length ? today.map(function (r) { return hm(r[0]) + '–' + hm(r[1]); }).join(' · ') : 'Chiuso';
       var open = today.filter(function (r) { return min >= r[0] && min < r[1]; })[0];
       var state;
       if (open) state = 'Aperto ora · chiude alle ' + hm(open[1]);
@@ -80,9 +76,14 @@
           state = 'Chiuso ora · riapre ' + (i === 1 ? 'domani' : DAYS[(day + i) % 7]) + ' alle ' + hm(OPEN[(day + i) % 7][0][0]);
         }
       }
-      nowState.textContent = state;
-      nowState.className = 'now-state' + (open ? ' open' : '');
-      nowState.hidden = false;
+      nowBoxes.forEach(function (box) {
+        box.querySelector('.now-title').textContent = 'Orari di oggi, ' + DAYS[day];
+        box.querySelector('.now-hours').textContent = today.length ? today.map(function (r) { return hm(r[0]) + '–' + hm(r[1]); }).join(' · ') : 'Chiuso';
+        var el = box.querySelector('.now-state');
+        el.textContent = state;
+        el.className = 'now-state' + (open ? ' open' : '');
+        el.hidden = false;
+      });
     };
     updateNow();
     setInterval(updateNow, 60000);
@@ -97,7 +98,7 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     document.documentElement.classList.add('js');
     document.querySelectorAll('main section').forEach(function (sec) {
-      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .svc, .ride, .last-ride, .signs, .ebay, .bike, .story-ph, .partners li, .pl-row, .bio-fig, .path li, .past, .reel, .contact-info > div, .panel, .map, .prose > *, .hint')
+      sec.querySelectorAll('h1, h2, .lead, .btns, .now, .side, .svc, .ride, .last-ride, .signs, .ebay, .bike, .story-ph, .partners li, .pl-row, .bio-fig, .path li, .past, .reel, .contact-info > div, .panel, .map, .prose > *, .hint')
         .forEach(function (el, i) {
           if (el.closest('.rv')) return;
           el.classList.add('rv');
