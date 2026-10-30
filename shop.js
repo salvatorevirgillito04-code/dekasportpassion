@@ -3,6 +3,8 @@
 (function () {
   var CAT = window.DEKA_CATALOGO || [];
   var WA_LINK = 'https://wa.me/393488112611';
+  /* Demo: gli ordini arrivano a Salvo finché il negozio non approva; poi rimettere WA_LINK */
+  var DEMO_WA = 'https://wa.me/393450397323';
   var KEY = 'deka-carrello';
   var PER_PAGE = 24;
 
@@ -250,7 +252,7 @@
       var msg = 'Ciao Deka! Vorrei ordinare:\n' + items.map(function (i) {
         return '- ' + i.q + ' × ' + i.n + (i.z ? ' (taglia ' + i.z + ')' : '') + ' – ' + eur(i.p * i.q);
       }).join('\n') + '\nConsegna: ' + (ship === 'ritiro' ? 'ritiro in negozio' : 'spedizione a casa');
-      window.open(WA_LINK + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      window.open(DEMO_WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
     renderCart();
   }

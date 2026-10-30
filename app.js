@@ -5,6 +5,8 @@
   var WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bubble" d="M3 21l1.6-4.8A8.5 8.5 0 1 1 7.8 19.4z"/>' +
     '<path class="phone" d="M9.2 7.6c.3 0 .5.1.6.4l.7 1.6c.1.3 0 .5-.1.7l-.6.7c.6 1.2 1.6 2.2 2.8 2.8l.7-.6c.2-.2.5-.2.7-.1l1.6.7c.3.1.4.3.4.6v1c0 .6-.5 1.1-1.1 1.1A7.1 7.1 0 0 1 8.1 8.7c0-.6.5-1.1 1.1-1.1z"/></svg>';
   var WA_LINK = 'https://wa.me/393488112611';
+  /* Demo: prenotazioni e ordini arrivano a Salvo finché il negozio non approva; poi rimettere WA_LINK */
+  var DEMO_WA = 'https://wa.me/393450397323';
   var HOURS = 'Lun e mer–sab: 9:00–12:30 · 15:30–19:30<br>Mar: 15:30–19:30<br>Dom: chiuso';
 
   /* Collega tutti i pulsanti WhatsApp delle pagine */
@@ -234,7 +236,7 @@
       months[dt.getMonth()] + ' alle ' + state.slot + '.\nNome: ' + f.nome.value.trim() +
       (f.telefono.value.trim() ? '\nTelefono: ' + f.telefono.value.trim() : '') + '\nBici: ' + f.bici.value +
       (f.note.value.trim() ? '\nNote: ' + f.note.value.trim() : '');
-    window.open(WA_LINK + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    window.open(DEMO_WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     form.hidden = true;
     elDoneTxt.textContent = summary() + '. Ti abbiamo aperto WhatsApp con la richiesta già scritta: inviala e ti confermiamo l\'appuntamento.';
     elDone.hidden = false;
