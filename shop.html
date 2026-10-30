@@ -24,69 +24,28 @@
   </div>
 </section>
 
-<section>
+<section id="catalogo">
   <div class="wrap">
-    <div class="head-row"><h2>Ciclismo</h2></div>
-    <div class="svc-list">
-      <a class="svc noicon" id="corsa" href="#vetrina"><h3>Bici da corsa</h3><p>Nuove e usate.</p><span class="arrow" aria-hidden="true">→</span></a>
-      <a class="svc noicon" id="gravel" href="#vetrina"><h3>Gravel</h3><p>Bici e accessori.</p><span class="arrow" aria-hidden="true">→</span></a>
-      <a class="svc noicon" id="mtb" href="#vetrina"><h3>MTB</h3><p>Bici e accessori.</p><span class="arrow" aria-hidden="true">→</span></a>
-      <a class="svc noicon" id="abbigliamento" href="#prodotti"><h3>Abbigliamento</h3><p>Estivo e invernale.</p><span class="arrow" aria-hidden="true">→</span></a>
-      <a class="svc noicon" id="accessori" href="#prodotti"><h3>Accessori</h3><p>Caschi, scarpe, luci, borracce.</p><span class="arrow" aria-hidden="true">→</span></a>
-      <a class="svc noicon" id="ricambi" href="#prodotti"><h3>Ricambi</h3><p>Pneumatici, catene, freni.</p><span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="head-row"><h2>Altri sport</h2></div>
-    <ul class="signs">
-      <li id="padel"><a href="#prodotti">Padel</a></li>
-      <li><a href="#prodotti">Tennis</a></li>
-      <li id="altri"><a href="#prodotti">Calcio</a></li>
-      <li><a href="#prodotti">Pallavolo</a></li>
-      <li><a href="#prodotti">Atletica e running</a></li>
-      <li><a href="#prodotti">Racchettoni</a></li>
-    </ul>
-  </div>
-</section>
-
-<section id="vetrina">
-  <div class="wrap">
-    <div class="head-row">
-      <h2>Bici in vetrina</h2>
-      <div class="tabs" role="group" aria-label="Filtra le bici">
-        <button type="button" data-tab="nuove" aria-pressed="true">Nuove</button>
-        <button type="button" data-tab="usate" aria-pressed="false">Usate</button>
+    <form class="filters" id="filters" role="search">
+      <label class="search">Cerca un prodotto<input type="search" name="q" placeholder="Es. Hoka, gravel, padel…" autocomplete="off"></label>
+      <div class="chips cat-chips" id="cat-chips" role="group" aria-label="Sport"></div>
+      <div class="filter-row">
+        <label>Sottocategoria<select name="sub"></select></label>
+        <label>Marchio<select name="brand"></select></label>
+        <label>Ordina<select name="sort">
+          <option value="new">Novità</option><option value="asc">Prezzo più basso</option>
+          <option value="desc">Prezzo più alto</option><option value="off">Sconto più alto</option>
+        </select></label>
+        <label class="check"><input type="checkbox" name="off"> Solo offerte</label>
       </div>
-    </div>
-    <div class="grid" data-group="nuove">
-      <article class="bike"><img src="img/focus-atlas-87.jpg" alt="Focus Atlas 8.7 viola e nera, gravel in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Focus Atlas 8.7</h3><p>Gravel in carbonio · Shimano GRX 2×12 · cerchi DT Swiss G540 · 9,7 kg. Ritirandola in negozio, messa in sella con visita biomeccanica.</p><div class="price-row"><span class="price"><s>2.699 €</s> 2.399 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><img src="img/cinelli-pressure.jpg" alt="Cinelli Pressure bianca, blu e arancione, bici da corsa in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Cinelli Pressure</h3><p>Corsa in carbonio · Shimano Ultegra Di2 12v · ruote Fulcrum Wind 55.</p><div class="price-row"><span class="price"><s>7.290 €</s> 5.450 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><img src="img/focus-raven-87.jpg" alt="Focus Raven 8.7 blu, mountain bike front in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Focus Raven 8.7</h3><p>MTB front in carbonio · SRAM SX Eagle 12v · forcella RockShox Judy · 13 kg.</p><div class="price-row"><span class="price"><s>2.199 €</s> 1.979 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-    </div>
-    <div class="grid" data-group="usate" hidden>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3>Somec Diablo RC</h3><p>Telaio in carbonio · <span class="todo">gruppo · taglia</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3>Merida <span class="todo">modello</span></h3><p><span class="todo">Gruppo · taglia · anno</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3><span class="todo">Modello</span></h3><p><span class="todo">Gruppo · taglia · anno</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-    </div>
+    </form>
+    <p class="catalog-count" id="catalog-count" aria-live="polite"></p>
+    <div class="prods" id="catalog-grid"><noscript><p class="empty">Per vedere il catalogo attiva JavaScript, oppure chiamaci allo 0545 45411.</p></noscript></div>
+    <div class="section-end"><button type="button" class="btn ghost" id="catalog-more" hidden>Mostra altri</button></div>
   </div>
 </section>
 
-<section class="alt" id="prodotti">
-  <div class="wrap">
-    <div class="head-row"><h2>Dal nostro catalogo</h2><p>Nel negozio online nuovo ci sarà tutto il catalogo, con disponibilità aggiornata.</p></div>
-    <div class="prods">
-      <article class="prod"><img src="img/hoka-speedgoat-6.jpg" alt="Scarpa da trail running Hoka Speedgoat 6 grigia e verde" width="800" height="800" loading="lazy"><div class="in"><p class="prod-sport">Running · trail</p><h3>Hoka Speedgoat 6</h3><div class="price-row"><span class="price">160 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="prod"><img src="img/asics-game-ff-padel.jpg" alt="Scarpa da padel Asics Game FF grigio azzurro" width="800" height="800" loading="lazy"><div class="in"><p class="prod-sport">Padel · uomo</p><h3>Asics Game FF Padel</h3><div class="price-row"><span class="price"><s>95 €</s> 84,90 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="prod"><img src="img/mizuno-morelia-ii-club.jpg" alt="Scarpa da calcio Mizuno Morelia II Club nera con 6 tacchetti" width="800" height="800" loading="lazy"><div class="in"><p class="prod-sport">Calcio · 6 tacchetti</p><h3>Mizuno Morelia II Club</h3><div class="price-row"><span class="price"><s>84,90 €</s> 69,90 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="prod"><img src="img/mizuno-wave-lightning-z8.jpg" alt="Scarpa da pallavolo Mizuno Wave Lightning Z8 bianca e arancione" width="800" height="800" loading="lazy"><div class="in"><p class="prod-sport">Pallavolo · unisex</p><h3>Mizuno Wave Lightning Z8</h3><div class="price-row"><span class="price"><s>170 €</s> 149,90 €</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-    </div>
-  </div>
-</section>
-
-<section id="marchi">
+<section class="alt" id="marchi">
   <div class="wrap">
     <div class="head-row"><h2>I marchi che trattiamo</h2></div>
     <ul class="signs brands">
@@ -96,6 +55,8 @@
 </section>
 
 </main>
+<script src="data/catalogo.js"></script>
 <script src="app.js"></script>
+<script src="shop.js"></script>
 </body>
 </html>

@@ -66,19 +66,19 @@
       <fieldset><legend>3. Orario disponibile</legend><div class="chips slots" id="b-slots"></div>
         <p class="hint">Gli orari barrati sono già occupati. Il martedì mattina e la domenica il negozio è chiuso.</p></fieldset>
       <div class="fields">
-        <label>Nome e cognome<input type="text" name="nome" autocomplete="name"></label>
+        <label>Nome e cognome<input type="text" name="nome" autocomplete="name" required></label>
         <label>Telefono<input type="tel" name="telefono" autocomplete="tel"></label>
         <label>Tipo di bici<select name="bici"><option>Corsa</option><option>Gravel</option><option>MTB</option><option data-altro>Altro</option></select></label>
       </div>
       <label>Cosa dobbiamo fare? (facoltativo)<textarea name="note" rows="3"></textarea></label>
       <div class="foot-row">
         <p id="b-summary" aria-live="polite" style="color:var(--ink2)"></p>
-        <button class="btn" type="submit">Conferma prenotazione</button>
+        <button class="btn wa" type="submit">Invia su WhatsApp</button>
       </div>
     </form>
 
     <div id="b-done" class="panel ok" role="status" tabindex="-1" hidden>
-      <h3>Prenotazione ricevuta!</h3>
+      <h3>Quasi fatto!</h3>
       <p id="b-done-text"></p>
       <button class="btn ghost" type="button" id="b-reset" style="align-self:flex-start">Nuova prenotazione</button>
     </div>

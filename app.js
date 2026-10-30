@@ -14,9 +14,9 @@
 
   var links = [
     ['index.html', 'Home', 'home'],
+    ['shop.html', 'Shop', 'shop'],
     ['servizi.html', 'Officina<span class="nav-long"> e biomeccanica</span>', 'servizi'],
     ['eventi.html', 'Eventi', 'eventi'],
-    ['shop.html', 'Shop', 'shop'],
     ['contatti.html', 'Contatti', 'contatti']
   ];
 
@@ -34,6 +34,8 @@
     }).join('') +
     '</nav>' +
     '<a class="btn" href="servizi.html#prenota">Prenota</a>' +
+    '<a class="cart-link" href="carrello.html" aria-label="Carrello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>' +
+    '<span class="cart-count" hidden>0</span></a>' +
     '<button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu-sheet">Menu</button>' +
     '</div></header>';
 
@@ -109,6 +111,12 @@
         });
     });
   }
+
+  /* Numero di articoli nel carrello (il carrello resta solo nel browser di chi lo usa) */
+  try {
+    var inCart = (JSON.parse(localStorage.getItem('deka-carrello')) || []).reduce(function (n, i) { return n + i.q; }, 0);
+    document.querySelectorAll('.cart-count').forEach(function (el) { el.textContent = inCart; el.hidden = !inCart; });
+  } catch (e) { /* senza memoria del browser il numero resta nascosto */ }
 
   /* Menu su telefono: una riga con "Menu" che apre le voci a tutto schermo */
   var navBar = document.querySelector('.nav');
@@ -218,8 +226,17 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!state.slot) { elSum.textContent = 'Scegli prima un orario disponibile'; return; }
+    var f = form.elements;
+    if (!f.nome.value.trim()) { elSum.textContent = 'Scrivi il tuo nome e cognome'; f.nome.focus(); return; }
+    /* La prenotazione arriva al negozio come messaggio WhatsApp già scritto: il cliente lo invia e il negozio conferma */
+    var dt = days[state.day];
+    var msg = 'Ciao Deka! Vorrei prenotare: ' + state.service + ', ' + names[dt.getDay()].toLowerCase() + ' ' + dt.getDate() + ' ' +
+      months[dt.getMonth()] + ' alle ' + state.slot + '.\nNome: ' + f.nome.value.trim() +
+      (f.telefono.value.trim() ? '\nTelefono: ' + f.telefono.value.trim() : '') + '\nBici: ' + f.bici.value +
+      (f.note.value.trim() ? '\nNote: ' + f.note.value.trim() : '');
+    window.open(WA_LINK + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     form.hidden = true;
-    elDoneTxt.textContent = summary() + '. In questa demo la richiesta non viene inviata: sul sito vero arriverà al negozio e ti confermeremo su WhatsApp.';
+    elDoneTxt.textContent = summary() + '. Ti abbiamo aperto WhatsApp con la richiesta già scritta: inviala e ti confermiamo l\'appuntamento.';
     elDone.hidden = false;
     elDone.focus();
   });
