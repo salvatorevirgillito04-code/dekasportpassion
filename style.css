@@ -12,7 +12,7 @@
   --green:#6CE002; --green-ink:#2E6B00; --dark:#0B0F12; --wa:#25D366; --amber:#F2C14E;
   --display:'Barlow Condensed',system-ui,sans-serif; --body:'Barlow',system-ui,sans-serif;
 
-  --fs-xl:clamp(48px,7vw,88px); --fs-l:clamp(32px,4.4vw,56px); --fs-m:clamp(24px,2.4vw,32px); --fs-s:18px; --fs-xs:14px; /* le 5 grandezze del testo */
+  --fs-xl:clamp(42px,7vw,88px); --fs-l:clamp(32px,4.4vw,56px); --fs-m:clamp(24px,2.4vw,32px); --fs-s:18px; --fs-xs:14px; /* le 5 grandezze del testo */
   --r:2px; --r-box:4px; /* pulsanti squadrati, superfici quasi vive */
 }
 *{box-sizing:border-box}
@@ -169,6 +169,16 @@ a.side .more{color:var(--green-ink);text-decoration:underline;padding:4px 0 0}
 .badge.used{background:var(--amber)}
 .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
 .price{font-family:var(--display);font-weight:800;font-size:var(--fs-m)}
+/* prodotti dal catalogo: 4 per riga su computer, 2 su telefono */
+.prods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.prod{background:var(--card);border-radius:var(--r-box);overflow:hidden;display:flex;flex-direction:column}
+.prod img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#fff}
+.prod .in{padding:18px;display:flex;flex-direction:column;gap:6px;flex-grow:1}
+.prod-sport{font-size:var(--fs-xs);color:var(--ink2)}
+.prod h3{font-size:var(--fs-s);line-height:1.15}
+.prod .price-row{flex-direction:column;align-items:flex-start;gap:2px}
+.prod .price{white-space:nowrap}
+.signs.brands li{color:var(--ink)}
 .price s{font-size:var(--fs-s);font-weight:600;color:var(--ink2);margin-right:6px}
 .price.ask{font-size:var(--fs-s);color:var(--ink2)}
 [hidden]{display:none!important}
@@ -270,12 +280,16 @@ footer a{color:var(--green)}
   .ride-data{grid-template-columns:1fr 1fr;gap:16px}
   .ride-data:has(> div:nth-child(5)){grid-template-columns:1fr 1fr}
   .pl-row{grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;padding:20px}
+  .pl-row:has(.price .todo){grid-template-columns:1fr}
+  .pl-row:has(.price .todo) .price{grid-row:3;text-align:left}
   .pl-row p:not(.price){grid-column:1/-1;grid-row:2}
   .past-wrap{grid-template-columns:1fr;gap:28px}
     .contact{grid-template-columns:1fr;gap:36px}
   .contact .map{min-height:340px}
   .foot-brand{margin-bottom:40px}
   .ebay{padding:20px}
+  .prods{grid-template-columns:1fr 1fr;gap:10px}
+  .prod .in{padding:14px}
 }
 
 /* whatsapp float */
