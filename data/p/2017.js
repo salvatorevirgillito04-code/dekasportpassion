@@ -1,0 +1,1 @@
+window.DEKA_PRODOTTO={"id":2017,"n":"Mizuno - Manicotti Pallavolo Armguard","b":"Mizuno","c":"Pallavolo","s":"Accessori","p":18.0,"w":null,"f":1,"z":["Giallo"],"path":["Pallavolo","Accessori"],"color":"","desc":["Tessuto elasticizzato per una migliore vestibilità. Set di due."],"sizes":[{"size":"Giallo","ok":true,"price":18.0,"was":null}],"store":true};

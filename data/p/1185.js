@@ -1,0 +1,1 @@
+window.DEKA_PRODOTTO={"id":1185,"n":"+adrenalina - Borsa MUltisport 56x30x32 cm","b":"+adrenalina","c":"Pallavolo","s":"Accessori","p":69.9,"w":null,"f":1,"z":["Nero"],"path":["Pallavolo","Accessori","Borse"],"color":"","desc":["cm 56x30x32"],"sizes":[{"size":"Nero","ok":true,"price":69.9,"was":null}],"store":true};

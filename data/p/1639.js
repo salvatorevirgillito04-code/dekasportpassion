@@ -1,0 +1,1 @@
+window.DEKA_PRODOTTO={"id":1639,"n":"WTB - Sella Volt Medium Steel","b":"","c":"Bike","s":"Accessori Bici","p":49.0,"w":null,"f":1,"z":["-"],"path":["Bike","Accessori Bici","Selle"],"color":"","desc":["Sella VOLT MEDIUM, rail in acciaio"],"sizes":[{"size":"-","ok":true,"price":49.0,"was":null}],"store":true};

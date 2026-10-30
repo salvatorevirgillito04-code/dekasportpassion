@@ -1,0 +1,1 @@
+window.DEKA_PRODOTTO={"id":1174,"n":"Joma - XPander 2201","b":"Joma","c":"Calcio","s":"Scarpe","p":54.9,"w":69.9,"f":1,"z":["46"],"path":["Calcio","Scarpe","Calcio"],"color":"","desc":["Tomaia in FIBERTEC (pelle sintetica)","Plantare in EVA","Soletta in texon PVC"],"sizes":[{"size":"46","ok":true,"price":54.9,"was":69.9}],"store":true};

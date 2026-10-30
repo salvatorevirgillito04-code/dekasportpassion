@@ -1,0 +1,1 @@
+window.DEKA_PRODOTTO={"id":1186,"n":"+adrenalina - Zaino 32x20x48 cm","b":"+adrenalina","c":"Pallavolo","s":"Accessori","p":64.9,"w":null,"f":1,"z":["Azzurro"],"path":["Pallavolo","Accessori","Borse"],"color":"","desc":["cm 32x20x48"],"sizes":[{"size":"Azzurro","ok":true,"price":64.9,"was":null}],"store":true};
