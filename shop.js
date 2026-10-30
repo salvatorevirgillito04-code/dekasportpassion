@@ -6,8 +6,10 @@
   var KEY = 'deka-carrello';
   var PER_PAGE = 24;
 
+  /* Prezzi all'italiana (2.399 €, 84,90 €) scritti a mano: non tutti i browser hanno il formato italiano */
   var eur = function (n) {
-    return n.toLocaleString('it-IT', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €';
+    var parts = (Math.round(n * 100) / 100).toFixed(n % 1 ? 2 : 0).split('.');
+    return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (parts[1] ? ',' + parts[1] : '') + ' €';
   };
   var esc = function (s) {
     return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
