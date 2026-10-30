@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carrello – Deka Sport Passion (demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="carrello">
+<main>
+
+<section class="page-hero">
+  <div class="wrap stack">
+    <h1>Il tuo carrello</h1>
+    <p class="lead">Ritiro gratis in negozio a Sant'Agata sul Santerno, oppure spedizione in tutta Italia in 1–3 giorni lavorativi.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap cart" id="cart">
+    <div class="cart-list" id="cart-list"></div>
+    <aside class="cart-sum side" id="cart-sum" aria-label="Riepilogo dell'ordine" hidden>
+      <h2 class="side-title">Riepilogo</h2>
+      <fieldset class="ship"><legend>Consegna</legend>
+        <label class="check"><input type="radio" name="ship" value="ritiro" checked> Ritiro in negozio</label>
+        <label class="check"><input type="radio" name="ship" value="casa"> Spedizione a casa</label>
+      </fieldset>
+      <table class="hours">
+        <tr><th scope="row">Prodotti</th><td id="cart-sub"></td></tr>
+        <tr><th scope="row">Consegna</th><td id="cart-ship"></td></tr>
+        <tr><th scope="row">Totale</th><td id="cart-total"></td></tr>
+      </table>
+      <button class="btn" type="button" id="cart-pay">Vai al pagamento</button>
+      <div class="pay-info" id="cart-pay-info" tabindex="-1" hidden>
+        <p>Il pagamento online (carta, PayPal e altri) si attiva sul sito definitivo. Per ora puoi mandarci l'ordine su WhatsApp: ti confermiamo disponibilità e consegna.</p>
+        <button class="btn wa" type="button" id="cart-wa">Invia l'ordine su WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+<script src="data/catalogo.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
