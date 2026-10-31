@@ -3,8 +3,6 @@
 (function () {
   var CAT = window.DEKA_CATALOGO || [];
   var WA_LINK = 'https://wa.me/393488112611';
-  /* Demo: gli ordini arrivano a Salvo finché il negozio non approva; poi rimettere WA_LINK */
-  var DEMO_WA = 'https://wa.me/393450397323';
   var KEY = 'deka-carrello';
   var PER_PAGE = 24;
 
@@ -243,16 +241,21 @@
     cart.addEventListener('change', function (e) {
       if (e.target.name === 'ship') { ship = e.target.value; renderCart(); }
     });
+    /* Pagamento sulla cassa Shopify: il carrello passa a Shopify con le varianti (taglie) già scelte.
+       Finché data/shopify.js non ha l'indirizzo del negozio, spiega che il collegamento è in preparazione. */
     document.getElementById('cart-pay').addEventListener('click', function () {
+      var shop = window.DEKA_SHOPIFY || {};
+      var items = load();
+      var lines = items.map(function (i) {
+        var v = (shop.varianti || {})['DEKA-' + i.id + '-' + (i.z || 'Taglia unica')];
+        return v ? v + ':' + i.q : null;
+      });
+      if (shop.negozio && lines.every(Boolean)) {
+        location.href = 'https://' + shop.negozio + '/cart/' + lines.join(',');
+        return;
+      }
       document.getElementById('cart-pay-info').hidden = false;
       document.getElementById('cart-pay-info').focus();
-    });
-    document.getElementById('cart-wa').addEventListener('click', function () {
-      var items = load();
-      var msg = 'Ciao Deka! Vorrei ordinare:\n' + items.map(function (i) {
-        return '- ' + i.q + ' × ' + i.n + (i.z ? ' (taglia ' + i.z + ')' : '') + ' – ' + eur(i.p * i.q);
-      }).join('\n') + '\nConsegna: ' + (ship === 'ritiro' ? 'ritiro in negozio' : 'spedizione a casa');
-      window.open(DEMO_WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
     renderCart();
   }
