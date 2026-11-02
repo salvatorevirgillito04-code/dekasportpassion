@@ -4,172 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Deka Sport Passion – Demo</title>
-<link rel="stylesheet" href="style.css">
+<title>Portfolio di Salvo – in aggiornamento</title>
+<style>
+  :root{--bg:#FAF7F0;--ink:#14181B;--accent:#2E6B00}
+  @media (prefers-color-scheme:dark){:root{--bg:#0B0F12;--ink:#F2F4F5;--accent:#6CE002}}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;background:var(--bg);color:var(--ink);font-family:system-ui,sans-serif;font-size:18px;line-height:1.5}
+  main{max-width:640px;margin:0 auto;padding:32px 20px}
+  h1{font-size:clamp(34px,8vw,56px);line-height:1.05;margin:0 0 16px;text-transform:uppercase;letter-spacing:-.01em}
+  a{color:var(--accent);font-weight:600}
+</style>
 </head>
-<body data-page="home">
+<body>
 <main>
-
-<section class="hero">
-  <div class="wrap">
-    <div class="txt">
-      <h1>Dal 1973<br>in sella con te.</h1>
-      <p class="lead">Bici, running, calcio, padel e tutto per il tuo sport, dal negozio di Sant'Agata sul Santerno: ritiro gratis in negozio o spedizione in tutta Italia.</p>
-      <form class="hero-search" action="shop.html" role="search">
-        <label class="search">Cerca nel negozio<input type="search" name="q" placeholder="Es. Hoka, gravel, scarpe da calcio…"></label>
-        <button class="btn" type="submit">Cerca</button>
-      </form>
-      <div class="btns">
-        <a class="btn" href="shop.html">Vai allo shop</a>
-        <a class="btn ghost" href="servizi.html#prenota">Prenota l'officina</a>
-      </div>
-    </div>
-    <aside class="now" data-now aria-label="Orari di oggi">
-      <h2 class="now-title">Orari di oggi</h2>
-      <p class="now-hours">Lun e mer–sab 9:00–12:30 · 15:30–19:30<br>Mar 15:30–19:30 · Dom chiuso</p>
-      <p class="now-state" hidden></p>
-      <p class="now-note">Nei festivi gli orari possono variare.</p>
-      <a class="now-link" href="contatti.html">Tutti gli orari e come arrivare →</a>
-      <dl class="facts">
-        <div><dt>1973</dt><dd>l'anno in cui abbiamo aperto</dd></div>
-        <div><dt>98%</dt><dd>recensioni positive su Facebook</dd></div>
-        <div><dt>5.000+</dt><dd>feedback sul nostro negozio eBay</dd></div>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<section class="alt" id="shop">
-  <div class="wrap">
-    <div class="head-row"><h2>Compra per sport</h2><p>Ritiro gratuito in negozio o spedizione a casa</p></div>
-    <ul class="signs">
-      <li><a href="shop.html?cat=Bike&amp;sub=Bici+da+Corsa">Bici da corsa</a></li>
-      <li><a href="shop.html?cat=Bike&amp;sub=Gravel">Gravel</a></li>
-      <li><a href="shop.html?cat=Bike&amp;sub=Mountain+Bike">MTB</a></li>
-      <li><a href="shop.html?cat=Bike&amp;sub=E-Bike">E-bike</a></li>
-      <li><a href="shop.html?cat=Bike&amp;sub=Abbigliamento">Abbigliamento</a></li>
-      <li><a href="shop.html?cat=Bike&amp;sub=Accessori+Bici">Accessori</a></li>
-      <li><a href="shop.html?cat=Running">Running</a></li>
-      <li><a href="shop.html?cat=Calcio">Calcio</a></li>
-      <li><a href="shop.html?cat=Pallavolo">Pallavolo</a></li>
-      <li><a href="shop.html?cat=Padel">Padel</a></li>
-      <li><a href="shop.html?cat=Trekking">Trekking</a></li>
-      <li><a href="shop.html?cat=Home+Fitness">Home fitness</a></li>
-    </ul>
-    <a class="ebay" href="https://www.ebay.it/str/dekasportpassion" target="_blank" rel="noopener">
-      <span><b>Ci trovi anche su eBay</b>Oltre 5.000 feedback dei clienti sul negozio DEKA SPORT PASSION.</span>
-      <span class="ebay-go">Visita il negozio eBay →</span>
-    </a>
-  </div>
-</section>
-
-<section id="offerte">
-  <div class="wrap">
-    <div class="head-row"><h2>Offerte del momento</h2><a class="more" href="shop.html?off=1&amp;sort=off">Tutte le offerte →</a></div>
-    <div class="prods" id="offerte-grid"><noscript><p class="empty"><a href="shop.html">Vai allo shop</a></p></noscript></div>
-  </div>
-</section>
-
-<section class="alt" id="vetrina">
-  <div class="wrap">
-    <div class="head-row">
-      <h2>Bici in vetrina</h2>
-      <div class="tabs" role="group" aria-label="Filtra le bici">
-        <button type="button" data-tab="nuove" aria-pressed="true">Nuove</button>
-        <button type="button" data-tab="usate" aria-pressed="false">Usate</button>
-      </div>
-    </div>
-    <div class="grid" data-group="nuove">
-      <article class="bike"><img src="img/focus-atlas-87.jpg" alt="Focus Atlas 8.7 viola e nera, gravel in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Focus Atlas 8.7</h3><p>Gravel in carbonio · Shimano GRX 2×12 · cerchi DT Swiss G540 · 9,7 kg. Ritirandola in negozio, messa in sella con visita biomeccanica.</p><div class="price-row"><span class="price"><s>2.699 €</s> 2.399 €</span><a class="more" href="prodotto.html?id=2460">Vedi la scheda →</a></div></div></article>
-      <article class="bike"><img src="img/cinelli-pressure.jpg" alt="Cinelli Pressure bianca, blu e arancione, bici da corsa in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Cinelli Pressure</h3><p>Corsa in carbonio · Shimano Ultegra Di2 12v · ruote Fulcrum Wind 55.</p><div class="price-row"><span class="price"><s>7.290 €</s> 5.450 €</span><a class="more" href="prodotto.html?id=1471">Vedi la scheda →</a></div></div></article>
-      <article class="bike"><img src="img/focus-raven-87.jpg" alt="Focus Raven 8.7 blu, mountain bike front in carbonio" width="1200" height="675" loading="lazy"><div class="in"><span class="badge">Nuova</span><h3>Focus Raven 8.7</h3><p>MTB front in carbonio · SRAM SX Eagle 12v · forcella RockShox Judy · 13 kg.</p><div class="price-row"><span class="price"><s>2.199 €</s> 1.979 €</span><a class="more" href="prodotto.html?id=1564">Vedi la scheda →</a></div></div></article>
-    </div>
-    <div class="grid" data-group="usate" hidden>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3>Somec Diablo RC</h3><p>Telaio in carbonio · <span class="todo">gruppo · taglia</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3>Merida <span class="todo">modello</span></h3><p><span class="todo">Gruppo · taglia · anno</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-      <article class="bike"><div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg><span>Foto in arrivo</span></div><div class="in"><span class="badge used">Usato controllato</span><h3><span class="todo">Modello</span></h3><p><span class="todo">Gruppo · taglia · anno</span></p><div class="price-row"><span class="price ask">Prezzo in negozio</span><a class="more" href="contatti.html">Richiedi info →</a></div></div></article>
-    </div>
-  </div>
-</section>
-
-<section id="servizi">
-  <div class="wrap">
-    <div class="head-row"><h2>Officina e servizi</h2></div>
-    <div class="svc-list">
-      <a class="svc" href="servizi.html#prenota">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
-        <h3>Officina specializzata</h3>
-        <p>Tagliandi, montaggi, cambi elettronici e ruote. Prenoti online e sai già quando ripassare.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="svc" href="servizi.html#biomeccanica">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle class="dash" cx="12" cy="16" r="4.5"/><path d="M4 4l10 5-4 11"/><path class="thin" d="M10.4 7.2A4 4 0 0 0 12.6 12.8"/><circle class="joint" cx="4" cy="4" r="1.7"/><circle class="joint" cx="14" cy="9" r="1.7"/><circle class="joint" cx="10" cy="20" r="1.7"/></svg>
-        <h3>Biomeccanica</h3>
-        <p>Posizione in sella su misura: più comfort, più potenza, meno dolori.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="svc" href="#vetrina">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h6l3.5 7.5M9 9l3 7.5H5.5M15 9l-1.5-3H11"/></svg>
-        <h3>Bici nuove e usate</h3>
-        <p>Corsa, gravel e MTB nuove, e usato controllato in officina.</p>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="eventi">
-  <div class="wrap">
-    <div class="head-row">
-      <div class="stack">
-        <h2>Pedala con noi</h2>
-        <p class="lead">Uscite e raduni in giro per la Romagna, con soste nei bar, ristoranti e agriturismi convenzionati.</p>
-      </div>
-    </div>
-    <div class="ride">
-      <h3>Prossima uscita: <span class="todo">Nome evento</span></h3>
-      <dl class="ride-data">
-        <div><dt>Partenza</dt><dd><span class="todo">Data e ora</span></dd></div>
-        <div><dt>Ritrovo</dt><dd><span class="todo">Luogo</span></dd></div>
-        <div><dt>Percorsi</dt><dd><span class="todo">Km e dislivello</span></dd></div>
-        <div><dt>Sosta</dt><dd><span class="todo">Locale convenzionato</span></dd></div>
-      </dl>
-      <div class="btns">
-        <a class="btn" href="eventi.html#whatsapp">Iscriviti</a>
-        <a class="btn wa" href="eventi.html#whatsapp">Ricevi gli eventi su WhatsApp</a>
-      </div>
-    </div>
-    <p class="last-ride">Ultimo evento, 11 ottobre 2026: <b>Raduno Bike Off Road “La Sabbiona”</b>, Memorial Babbo Fontigi a Oriolo dei Fichi (Faenza). <a href="https://www.instagram.com/reel/DeEeomMHDno/" target="_blank" rel="noopener">Guarda il video su Instagram →</a></p>
-  </div>
-</section>
-
-<section class="story" id="storia">
-  <div class="wrap">
-    <div class="txt stack">
-      <h2>Una famiglia di sportivi, dal 1973</h2>
-      <p class="lead"><span class="todo">La storia della famiglia: chi ha fondato il negozio, come è cresciuto, chi c'è oggi in negozio e in officina.</span></p>
-      <p class="lead">Oltre al ciclismo: abbigliamento e accessori per calcio, tennis, padel, racchettoni, pallavolo e atletica.</p>
-    </div>
-    <figure class="story-ph">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5h4l1.6-2.5h6.8L17 8.5h4V19H3z"/><circle cx="12" cy="13.2" r="3.6"/></svg>
-      <figcaption><span class="todo">Foto della famiglia o del negozio</span></figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap" style="text-align:center">
-    <div class="stack" style="align-items:center">
-      <h2>Ti serve una mano con la bici?</h2>
-      <p class="lead">Prenota officina o biomeccanica online, scegli il giorno e l'orario libero.</p>
-      <a class="btn" href="servizi.html#prenota">Prenota ora</a>
-    </div>
-  </div>
-</section>
-
+  <h1>Portfolio in aggiornamento</h1>
+  <p>Qui a breve trovi un sito-esempio per un negozio di bici con officina: shop online, prenotazioni e orari, realizzato da Salvo, social media manager.</p>
+  <p>Nel frattempo: <a href="https://www.instagram.com/_s_alvo/" target="_blank" rel="noopener">Instagram @_s_alvo</a></p>
 </main>
-<script src="data/catalogo.js"></script>
-<script src="app.js"></script>
-<script src="shop.js"></script>
 </body>
 </html>
