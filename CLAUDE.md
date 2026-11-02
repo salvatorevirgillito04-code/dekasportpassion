@@ -1,3 +1,10 @@
+# ATTENZIONE – NUOVA DIREZIONE (2 nov 2026)
+**Deka Sport Passion ha chiuso definitivamente.** Il progetto diventa un **portfolio di Salvo**: sito-esempio per un **bike shop con officina inventato** (nome di fantasia da scegliere con Salvo), con tutte le funzioni in modalità dimostrazione (shop con carrello e filtri, prenotazione, orari vivi), **senza numeri di telefono, WhatsApp o Shopify reali**.
+- Va tolto **tutto** ciò che è di Deka: nome, logo, foto e prodotti presi dal loro sito, prezzi, indirizzo, numeri, eventi, link social/eBay, P.IVA. Il materiale qui sotto su Deka resta solo come storia del progetto.
+- Foto: libere da diritti (Wikimedia/Openverse) con autore e licenza in fondo pagina (scelta di Salvo). Prodotti e prezzi inventati ma realistici.
+- Online, dal 2 nov, `main` contiene solo una pagina temporanea "Portfolio in aggiornamento" (`index.html` + `robots.txt`); il lavoro completo è sul ramo `ccr-ba28a8dc-ka04c7`. Quando il portfolio è pronto, portarlo su `main` al posto della pagina temporanea.
+- Il numero personale di Salvo è stato tolto anche dalla cronologia (2 nov). Non inserirlo mai.
+
 # Progetto: sito demo Deka Sport Passion
 
 Lavoro di Salvo (Instagram @_s_alvo) per proporsi come social media manager a **Deka Sport Passion** (Sport Passion Srl, P.IVA 02413030392), negozio di articoli sportivi a conduzione familiare a Sant'Agata sul Santerno (RA), Via Ricci Curbastro 15/17. Salvo **non ha ancora parlato con il negozio**: vuole presentarsi con un prodotto pronto (sito demo + restyling Instagram + documento di proposta con prezzi).
